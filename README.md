@@ -1,2 +1,2 @@
 # AtCoder in Swift
-AtCoder in Swift is the unofficial library for AtCoder written in Swift.It's respect for ACLibrary and has been improving.
+AtCoder in Swift is an unofficial Swift library for AtCoder. It's inspired by ACLibrary and is continuously being improved.
