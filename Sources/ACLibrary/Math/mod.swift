@@ -11,6 +11,7 @@ struct ModInt: CustomStringConvertible {
 		self.value = num
 	}
 
+	@inline(__always)
 	init(_ a: Int, _ b: Int) {
 		self.value = 0
 		let anum = a % ModInt.mod
