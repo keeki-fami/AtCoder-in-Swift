@@ -1,6 +1,6 @@
 // 最大公約数
 // O(N)
-func gcd(_ val: Int ... ) -> Int? {
+public func gcd(_ val: Int ... ) -> Int? {
 
 	let cnt = val.count
 
@@ -24,7 +24,7 @@ func gcd(_ val: Int ... ) -> Int? {
 
 // 最小公倍数
 // O(N)
-func lcm(_ val: Int ... ) -> Int? {
+public func lcm(_ val: Int ... ) -> Int? {
 
 	let l = val.count
 	if l < 2 {

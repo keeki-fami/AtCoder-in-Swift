@@ -2,7 +2,7 @@
 // https://docs.swift.org/swift-book
 import Foundation
 
-struct ModInt: CustomStringConvertible {
+public struct ModInt: CustomStringConvertible {
 	static let mod = 998_244_353
 	var value: Int
 
