@@ -121,7 +121,7 @@ public struct ModInt: CustomStringConvertible {
 		left = left + right
 	}
 
-	var description: String {
+	public var description: String {
 		return "\(self.value)"
 	}
 }
