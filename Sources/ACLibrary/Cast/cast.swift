@@ -1,7 +1,7 @@
 // cast Array<Int> to Int
 // ex: [1,2,3] -> 123
 // O(N) N: length of Array<Int>
-func intArrayToInt(_ intList: [Int]) -> Int {
+public func intArrayToInt(_ intList: [Int]) -> Int {
 	var num = 0
 	for i in intList {
 		num = num * 10 + i
@@ -9,7 +9,7 @@ func intArrayToInt(_ intList: [Int]) -> Int {
 	return num
 }
 
-func stringArrayToInt(_ list: [String]) -> Int? {
+public func stringArrayToInt(_ list: [String]) -> Int? {
 	return genericArrayToInt(list)
 }
 
