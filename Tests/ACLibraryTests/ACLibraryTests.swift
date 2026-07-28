@@ -29,9 +29,9 @@ import Testing
 @Test func CastTest() {
     // cast.swift
     let ar1 = ["12", "33", "31"]
-    #expect(genericArrayToInt(ar1) == 123331)
+    #expect(stringArrayToInt(ar1) == 123331)
     let ar2 = ["1", "2", "3", "4"]
-    #expect(genericArrayToInt(ar2) == 1234)
+    #expect(stringArrayToInt(ar2) == 1234)
     let ar3 = ["1", "a", "3"]
-    #expect(genericArrayToInt(ar3) == nil)
+    #expect(stringArrayToInt(ar3) == nil)
 }
