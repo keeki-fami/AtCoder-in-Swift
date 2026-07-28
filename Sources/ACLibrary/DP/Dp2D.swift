@@ -30,9 +30,16 @@ class Dp2D {
 			table[i][j] = num
 		}
 	}
+
+	// 実際にloop内で行う条件式を記述する。
+	func loop(_ body: (Int) -> Void) {
+		for i in 0..<h {
+			body(i)
+		}
+	}
 	
 	// 実際にloop内で行う条件式を記述する。
-	func loop(_ body: (Int, Int) -> Void) {
+	func loop2(_ body: (Int, Int) -> Void) {
 		for i in 0..<h {
 			for j in 0..<w {
 				body(i, j)
