@@ -1,7 +1,7 @@
 // 二次元配列のDP
 // 方向性: h, w, tableが散らばるのを防ぐ。
 // 新たに記述するのは、dpの条件部分だけにする。
-class Dp2D {
+struct Dp2D {
 	var h: Int
 	var w: Int
 	var table: [[Int]]
@@ -10,15 +10,10 @@ class Dp2D {
 	init(_ h: Int, _ w: Int, _ num: Int) {
 		self.h = h
 		self.w = w
-		self.table = []
-		for _ in 0..<h {
-			table.append(
-				Array(
-					repeating: num,
-					count: w,
-				)
-			)
-		}
+		self.table = Array(
+			repeating: Array(repeating: num, count: w),
+			count: h
+		)
 	}
 
 	// アクセスがdp[i, j]になる

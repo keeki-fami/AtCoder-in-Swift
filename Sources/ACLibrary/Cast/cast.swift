@@ -9,10 +9,14 @@ func intArrayToInt(_ intList: [Int]) -> Int {
 	return num
 }
 
+func stringArrayToInt(_ list: [String]) -> Int? {
+	return genericArrayToInt(list)
+}
+
 // cast Array<T> to Int (T needs to comply to StringProtocol)
 // ex1: ["1", "2", "3"] -> 123
 // ex2: ["a", "b", "c"] -> nil
-func genericArrayToInt<T: StringProtocol>(_ list: [T]) -> Int? {
+private func genericArrayToInt<T: StringProtocol>(_ list: [T]) -> Int? {
 	let mul: [Int] = [
 		1, 
 		10, 
