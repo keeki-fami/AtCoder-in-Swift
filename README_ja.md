@@ -8,3 +8,19 @@
 これらを達成するために、このライブラリは以下を提供します。
 - SwiftUIを意識した宣言的なコーディング体験
 - 競技プログラミングに特化した、様々な関数の提供
+# 内容
+```
+└── ACLibrary
+    ├── Algorithms
+    │   ├── BinarySearch
+    │   ├── DP
+    │   │   └── Dp2D.swift
+    │   └── bit
+    │       └── BitFullSearch.swift
+    ├── Cast
+    │   └── cast.swift
+    └── Math
+        ├── gcd_lcm.swift
+        ├── modint.swift
+        └── pow.swift
+```
