@@ -1,27 +1,68 @@
 struct BinarySearch {
 	var high: Int
 	var low: Int
-	var isSolveMininMax: Bool
+	var arr: [Int]
+	var type: ProblemType
+
+	enum ProblemType {
+		case Search
+		case MaxinMin
+		case MininMax
+	}
+
+	init(high: Int, low: Int, arr: [Int]) {
+		self.high = high
+		self.low = low
+		self.arr = arr.sorted()
+		self.type = .Search
+	}
 
 	init(high: Int, low: Int, isSolveMininMax: Bool) {
 		self.high = high
 		self.low = low
-		self.isSolveMininMax = isSolveMininMax
+
+		if isSolveMininMax {
+			self.type = .MininMax
+		} else {
+			self.type = .MaxinMin
+		}
+		arr = []
 	}
 
-	func search(_ body: () -> Bool) -> Int {
-		var h = high
-		var l = low
-		while(low + 1 < high) {
-			let middle = (h + l) / 2
-			if body() {
-				if isSolveMininMax {h = middle} else {l = middle}
+	// search x, return index
+	func find(_ x: Int) -> Int {
+		var h = self.arr.count
+		var l = -1
+
+		while (l + 1 < h) {
+			let middle = (l + h) / 2
+			if arr[middle] == x {
+				return middle
+			} else if arr[middle] > x {
+				h = middle
 			} else {
-				if isSolveMininMax {l = middle} else {h = middle}
+				l = middle
 			}
 		}
 
-		if isSolveMininMax {
+		return -1
+	}
+	func search(_ body: (Int, Int, Int) -> Bool) -> Int {
+		var h = high
+		var l = low
+		while(l + 1 < h) {
+			let middle = (h + l) / 2
+			if body(l, h, middle) {
+				if self.type == .MininMax {h = middle} else {l = middle}
+			} else {
+				if self.type == .MininMax {l = middle} else {h = middle}
+			}
+		}
+		if h == high || l == low {
+			// 答えない
+			return -1
+		}
+		if self.type == .MininMax {
 			return h
 		} else {
 			return l
