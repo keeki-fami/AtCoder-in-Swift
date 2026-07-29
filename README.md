@@ -4,5 +4,5 @@
 - Minimize the barrier to getting started with AtCoder for iOS developers.
 - Hide routine code and let uses focus on algorithms.<br><br>
 To achieve these goals, this library provides:
-A SwiftUI-like coding experience
-A variety of utility functions for AtCoderTo achieve above, this library provides you 
+- A SwiftUI-like coding experience
+- A variety of utility functions for AtCoderTo achieve above, this library provides you 
