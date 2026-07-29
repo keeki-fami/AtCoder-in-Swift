@@ -6,7 +6,7 @@ public struct BitFullSearch {
 		self.n = n
 		bit = n
 	}
-
+	
 	func search(before: () -> Void, isOne: (Int) -> Void, isZero: (Int) -> Void, after: () -> Void) {
 		for num in 0 ..< (1<<n) {
 			// for initialize
