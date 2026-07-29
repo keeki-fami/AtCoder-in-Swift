@@ -1,0 +1,31 @@
+struct BinarySearch {
+	var high: Int
+	var low: Int
+	var isSolveMininMax: Bool
+
+	init(high: Int, low: Int, isSolveMininMax: Bool) {
+		self.high = high
+		self.low = low
+		self.isSolveMininMax = isSolveMininMax
+	}
+
+	func search(_ body: () -> Bool) -> Int {
+		var h = high
+		var l = low
+		while(low + 1 < high) {
+			let middle = (h + l) / 2
+			if body() {
+				if isSolveMininMax {h = middle} else {l = middle}
+			} else {
+				if isSolveMininMax {l = middle} else {h = middle}
+			}
+		}
+
+		if isSolveMininMax {
+			return h
+		} else {
+			return l
+		}
+	}
+
+}
