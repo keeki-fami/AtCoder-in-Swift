@@ -1,10 +1,10 @@
 struct BinarySearch {
-	var _high: Int?
-	var _low: Int?
-	var _arr: [Int]?
-	var _type: ProblemType
+	private var _high: Int?
+	private var _low: Int?
+	private var _arr: [Int]?
+	private var _type: ProblemType
 
-	enum ProblemType {
+	private enum ProblemType {
 		case Search
 		case MaxinMin
 		case MininMax
