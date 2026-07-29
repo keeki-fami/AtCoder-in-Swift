@@ -47,6 +47,8 @@ struct BinarySearch {
 
 		return -1
 	}
+
+	// 最大値の最小化 (最小値の最大化)
 	func search(_ body: (Int, Int, Int) -> Bool) -> Int {
 		var h = high
 		var l = low
@@ -59,7 +61,7 @@ struct BinarySearch {
 			}
 		}
 		if h == high || l == low {
-			// 答えない
+			// 答えがない
 			return -1
 		}
 		if self.type == .MininMax {
