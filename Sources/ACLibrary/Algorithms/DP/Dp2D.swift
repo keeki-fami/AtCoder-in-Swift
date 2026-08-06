@@ -26,18 +26,30 @@ public struct DP2D {
 	}
 
 	// 実際にloop内で行う条件式を記述する。
-	func loop(_ body: (Int) -> Void) {
+	func loop(
+		before: (inout [[Int]]) -> Void, body: (Int, inout [[Int]]) -> Void,
+		complete: (inout [[Int]]) -> Void
+	) {
+		var looptable = self.table
+		before(&looptable)
 		for i in 0..<h {
-			body(i)
+			body(i, &looptable)
 		}
+		complete(&looptable)
 	}
-	
+
 	// 実際にloop内で行う条件式を記述する。
-	func loop2(_ body: (Int, Int) -> Void) {
+	func loop2(
+		_ body: (Int, Int, inout [[Int]]) -> Void, _ loopfinish: (Int, inout [[Int]]) -> Void,
+		complete: (inout [[Int]]) -> Void
+	) {
+		var looptable = self.table
 		for i in 0..<h {
 			for j in 0..<w {
-				body(i, j)
+				body(i, j, &looptable)
 			}
+			loopfinish(i, &looptable)
 		}
+		complete(&looptable)
 	}
 }
