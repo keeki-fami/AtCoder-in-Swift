@@ -1,7 +1,6 @@
 // 二次元配列のDP
-// 方向性: h, w, tableが散らばるのを防ぐ。
 // 新たに記述するのは、dpの条件部分だけにする。
-public struct Dp2D {
+public struct DP2D {
 	var h: Int
 	var w: Int
 	var table: [[Int]]
