@@ -2,7 +2,7 @@
 // https://docs.swift.org/swift-book
 import Foundation
 
-public struct ModInt: CustomStringConvertible {
+public struct ModInt {
 	static let mod = 998_244_353
 	var value: Int
 
@@ -120,7 +120,9 @@ public struct ModInt: CustomStringConvertible {
 	static func += (left: inout ModInt, right: Int) {
 		left = left + right
 	}
+}
 
+extension ModInt: CustomStringConvertible {
 	public var description: String {
 		return "\(self.value)"
 	}
