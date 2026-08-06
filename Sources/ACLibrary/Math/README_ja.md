@@ -18,3 +18,5 @@ print(num3) // 1
 let num4 = ModInt(1, 2) // 1/2に対してモジュロ演算を行う。
 print(num4) // 499122177
 ```
+### example
+- [ABC464 D - Celester](https://atcoder.jp/contests/abc464/submissions/78157261)
