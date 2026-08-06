@@ -13,6 +13,7 @@ import Testing
     #expect(y == 10)
 
     // pow.swift
+    #expect(rep_pow2(2,0) == 1)
     #expect(rep_pow2(2, 3) == 8)
     #expect(rep_pow2(2, 10) == 1024)
 
