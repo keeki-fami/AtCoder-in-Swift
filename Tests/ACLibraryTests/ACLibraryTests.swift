@@ -24,6 +24,39 @@ import Testing
     #expect(gcd(12, 18) == 6)
     #expect(lcm(12, 18) == 36)
     #expect(lcm(4, 5, 8, 12, 9) == 360)
+
+    // ceiling
+    // po/po 割り切れる
+    // po/po 割り切れない
+    // ne/po 割り切れる
+    // ne/po 割り切れない
+    // ne/ne 割り切れない
+    // ne/ne 割り切れる
+    // R / 0 nilを返す
+    #expect(ceilDiv(6,3) == Optional(2))
+    #expect(ceilDiv(6,4) == Optional(2))
+    #expect(ceilDiv(-6,3) == Optional(-2))
+    #expect(ceilDiv(-6,4) == Optional(-1))
+    #expect(ceilDiv(-6,-3) == Optional(2))
+    #expect(ceilDiv(-6,-4) == Optional(2))
+    #expect(ceilDiv(12,0) == nil)
+
+    // floor
+    // po/po 割り切れる
+    // po/po 割り切れない
+    // ne/po 割り切れる
+    // ne/po 割り切れない
+    // ne/ne 割り切れない
+    // ne/ne 割り切れる
+    // R / 0 nilを返す
+    #expect(floorDiv(12,4) == Optional(3))
+    #expect(floorDiv(12,5) == Optional(2))
+    #expect(floorDiv(-12,4) == Optional(-3))
+    #expect(floorDiv(-12,5) == Optional(-3))
+    #expect(floorDiv(-6,-3) == Optional(2))
+    #expect(floorDiv(-6,-4) == Optional(1))
+    #expect(floorDiv(12,0) == nil)
+
 }
 
 @Test func CastTest() {
