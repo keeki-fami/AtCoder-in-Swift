@@ -6,7 +6,7 @@ public struct DP2D {
 	var table: [[Int]]
 
 	// num: 初期化に使用する数値
-	init(_ h: Int, _ w: Int, _ num: Int) {
+	public init(_ h: Int, _ w: Int, _ num: Int) {
 		self.h = h
 		self.w = w
 		self.table = Array(
@@ -16,7 +16,7 @@ public struct DP2D {
 	}
 
 	// アクセスがdp[i, j]になる
-	subscript(i: Int, j: Int) -> Int {
+	public subscript(i: Int, j: Int) -> Int {
 		get {
 			return table[i][j]
 		}
@@ -26,7 +26,7 @@ public struct DP2D {
 	}
 
 	// 実際にloop内で行う条件式を記述する。
-	func loop(
+	public func loop(
 		before: (inout [[Int]]) -> Void, body: (Int, inout [[Int]]) -> Void,
 		complete: (inout [[Int]]) -> Void
 	) {
@@ -39,7 +39,7 @@ public struct DP2D {
 	}
 
 	// 実際にloop内で行う条件式を記述する。
-	func loop2(
+	public func loop2(
 		_ body: (Int, Int, inout [[Int]]) -> Void, _ loopfinish: (Int, inout [[Int]]) -> Void,
 		complete: (inout [[Int]]) -> Void
 	) {

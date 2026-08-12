@@ -1,5 +1,5 @@
 // 分母と分子を一回ずつ計算する
-func nCr(n: Int, r: Int) -> Int {
+public func nCr(n: Int, r: Int) -> Int {
 	var num = 1
 	for i in 0..<r {
 		num *= n-i
@@ -11,7 +11,7 @@ func nCr(n: Int, r: Int) -> Int {
 	return num
 }
 
-func factorial(_ n: Int) -> Int {
+public func factorial(_ n: Int) -> Int {
 	var num = 1
 	let factorialLen = factorialTable.count - 1
 	for i in stride(from: n, to: -1, by: -1) {

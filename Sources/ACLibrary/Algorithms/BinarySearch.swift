@@ -10,7 +10,7 @@ struct BinarySearch {
 		case MininMax
 	}
 
-	init(arr: [Int]) {
+	public init(arr: [Int]) {
 		self._arr = arr.sorted()
 		self._type = .Search
 
@@ -18,7 +18,7 @@ struct BinarySearch {
 		self._low = nil
 	}
 
-	init(high: Int, low: Int, isSolveMininMax: Bool) {
+	public init(high: Int, low: Int, isSolveMininMax: Bool) {
 		self._high = high
 		self._low = low
 
@@ -31,7 +31,7 @@ struct BinarySearch {
 	}
 
 	// search x, return index
-	func find(_ x: Int) -> Int {
+	public func find(_ x: Int) -> Int {
 		guard let arr = self._arr else {
 			return -1
 		}
@@ -53,7 +53,7 @@ struct BinarySearch {
 	}
 
 	// 最大値の最小化 (最小値の最大化)
-	func search(_ body: (Int, Int, Int) -> Bool) -> Int {
+	public func search(_ body: (Int, Int, Int) -> Bool) -> Int {
 		guard var h = _high, var l = _low else {
 			return -1
 		}

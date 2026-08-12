@@ -1,4 +1,4 @@
-func ceilDiv(_ x: Int, _ y: Int) -> Int? {
+public func ceilDiv(_ x: Int, _ y: Int) -> Int? {
 	var _x = x
 	var _y = y
 
@@ -24,7 +24,7 @@ func ceilDiv(_ x: Int, _ y: Int) -> Int? {
 	}
 }
 
-func floorDiv(_ x: Int, _ y: Int) -> Int? {
+public func floorDiv(_ x: Int, _ y: Int) -> Int? {
 	var _x = x
 	var _y = y
 
