@@ -4,11 +4,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "atcoder_in_swift",
+    name: "Atcoder-in-Swift",
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "ACLibrary",
+            name: "AtcoderInSwift",
             targets: ["ACLibrary"]
         ),
     ],
