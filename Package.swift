@@ -8,19 +8,19 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "AtcoderInSwift",
-            targets: ["ACLibrary"]
+            name: "AtCoderInSwift",
+            targets: ["AtCoderInSwift"]
         ),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "ACLibrary"
+            name: "AtCoderInSwift"
         ),
         .testTarget(
             name: "ACLibraryTests",
-            dependencies: ["ACLibrary"]
+            dependencies: ["AtCoderInSwift"]
         ),
     ],
     swiftLanguageModes: [.v6]

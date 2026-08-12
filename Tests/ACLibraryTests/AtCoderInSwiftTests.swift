@@ -1,6 +1,6 @@
 import Testing
 
-@testable import ACLibrary
+@testable import AtCoderInSwift
 
 // Write your test here and use APIs like `#expect(...)` to check expected conditions.
 // Swift Testing Documentation
