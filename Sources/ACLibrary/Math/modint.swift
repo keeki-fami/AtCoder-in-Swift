@@ -14,13 +14,17 @@ public struct ModInt {
 	public init(_ a: Int, _ b: Int) {
 		self.value = 0
 		let anum = a % ModInt.mod
-		let bnum = ModInt.rep_pow2_mod(b, ModInt.mod - 2)
+		let bnum = ModInt.pow_mod(b, ModInt.mod - 2)
 		self.value = anum * bnum % ModInt.mod
+	}
+
+	mutating public func inverse() {
+		self.value = ModInt.pow_mod(self.value, ModInt.mod-2)
 	}
 
 	// 繰り返し二乗法(mod)
 	// aのpo乗を、mod998244353で求める
-	private static func rep_pow2_mod(_ a: Int, _ po: Int) -> Int {
+	private static func pow_mod(_ a: Int, _ po: Int) -> Int {
 		var p = po
 		var ans = 1
 		var num = a
@@ -87,17 +91,17 @@ public struct ModInt {
 	}
 
 	public static func / (left: ModInt, right: ModInt) -> ModInt {
-		let val = ModInt.rep_pow2_mod(left.value, right.value)
-		return ModInt(val)
+		let val = left*ModInt.pow_mod(left.value, self.mod-2)
+		return val
 	}
 	public static func / (left: Int, right: ModInt) -> ModInt {
 		let left_modint = ModInt(left)
-		let val = ModInt.rep_pow2_mod(left_modint.value, right.value)
+		let val = left_modint.value * ModInt.pow_mod(right.value, self.mod-2)
 		return ModInt(val)
 	}
 	public static func / (left: ModInt, right: Int) -> ModInt {
 		let right_modint = ModInt(right)
-		let val = ModInt.rep_pow2_mod(left.value, right_modint.value)
+		let val = left.value * ModInt.pow_mod(right_modint.value, right_modint.value)
 		return ModInt(val)
 	}
 

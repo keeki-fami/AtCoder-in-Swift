@@ -11,6 +11,9 @@ import Testing
     #expect(x == 499_122_184)
     let y = ModInt(10)
     #expect(y == 10)
+    var z = ModInt(2)
+    z.inverse()
+    #expect(z == 499122177)
 
     // pow.swift
     #expect(rep_pow2(2,0) == 1)
