@@ -1,22 +1,27 @@
 // 分母と分子を一回ずつ計算する
-public func nCr(n: Int, r: Int) -> Int {
+// O(r)
+public func nCrMod(n: Int, r: Int, mod: Int) -> Int {
 	var num = 1
-	for i in 0..<r {
-		num *= n-i
-		if i != 0{
-			num /= r - i + 1
-		}
+	if r == 0 {
+		return 1
 	}
-
+	for i in (n-r+1)...(n) {
+		num *= i
+		num %= mod
+	}
+	for j in 1...r {
+		num *= pow_mod(j, mod-2, mod)
+		num%=mod
+	}
 	return num
 }
 
-public func factorial(_ n: Int) -> Int {
+public func factorial_mod(_ n: Int) -> Int {
 	var num = 1
 	let factorialLen = factorialTable.count - 1
 	for i in stride(from: n, to: -1, by: -1) {
 		if i <= factorialLen {
-			return num*factorialTable[i]
+			return num*factorialTable[i] % 998244353
 		} else {
 			num *= i
 		}
@@ -24,26 +29,27 @@ public func factorial(_ n: Int) -> Int {
 	return num
 }
 
+// 998244353s
 private let factorialTable: [Int] = [
-    1, // 0!
-    1, // 1!
-    2, // 2!
-    6, // 3!
-    24, // 4!
-    120, // 5!
-    720, // 6!
-    5040, // 7!
-    40320, // 8!
-    362880, // 9!
-    3628800, // 10!
-    39916800, // 11!
-    479001600, // 12!
-    6227020800, // 13!
-    87178291200, // 14!
-    1307674368000, // 15!
-    20922789888000, // 16!
-    355687428096000, // 17!
-    6402373705728000, // 18!
-    121645100408832000, // 19!
-    2432902008176640000, // 20!
+    1,            // 0!  mod 998244353
+    1,            // 1!
+    2,            // 2!
+    6,            // 3!
+    24,           // 4!
+    120,          // 5!
+    720,          // 6!
+    5_040,        // 7!
+    40_320,       // 8!
+    362_880,      // 9!
+    3_628_800,    // 10!
+    39_916_800,   // 11!
+    479_001_600,  // 12!
+    237_554_682,  // 13!
+    331_032_489,  // 14!
+    972_509_923,  // 15!
+    586_493_473,  // 16!
+    986_189_864,  // 17!
+    781_263_551,  // 18!
+    868_586_527,  // 19!
+    401_576_539,  // 20!
 ]
