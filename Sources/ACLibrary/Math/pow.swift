@@ -1,12 +1,12 @@
 // repeated squaring
 // O(logN) (a^N)
-public func rep_pow2(_ a: Int, _ po: Int) -> Int {
-	return rep_pow2_mod(a, po, nil)
+public func pow_d(_ a: Int, _ po: Int) -> Int {
+	return pow_mod(a, po, nil)
 }
 
 // repeated squaring (mod)
 // O(logN) (a^N)
-public func rep_pow2_mod(_ a: Int, _ po: Int, _ mod: Int?) -> Int {
+public func pow_mod(_ a: Int, _ po: Int, _ mod: Int?) -> Int {
 	var p = po
 	var ans = 1
 	var num = a

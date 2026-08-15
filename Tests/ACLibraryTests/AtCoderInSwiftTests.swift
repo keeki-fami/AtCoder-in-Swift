@@ -5,20 +5,31 @@ import Testing
 // Write your test here and use APIs like `#expect(...)` to check expected conditions.
 // Swift Testing Documentation
 // https://developer.apple.com/documentation/testing
-@Test func MathTest() {
-    // modint.swift
-    let x = ModInt(15, 2)
-    #expect(x == 499_122_184)
-    let y = ModInt(10)
-    #expect(y == 10)
-    var z = ModInt(2)
-    z.inverse()
-    #expect(z == 499122177)
 
-    // pow.swift
-    #expect(rep_pow2(2,0) == 1)
-    #expect(rep_pow2(2, 3) == 8)
-    #expect(rep_pow2(2, 10) == 1024)
+struct ModIntTest {
+    @Test func InitTest() {
+        let x = ModInt(15, 2)
+        #expect(x == 499_122_184)
+        let y = ModInt(10)
+        #expect(y == 10)
+        var z = ModInt(2)
+        z.inverse()
+        #expect(z == 499122177)
+    }
+
+    @Test func AddTest() {
+        let x = ModInt(15)
+        let y = ModInt(17)
+        #expect(x+y == 32)
+    }
+}
+
+struct PowTest {
+    #expect(pow_d(2,0) == 1)
+    #expect(pow_mod(2, 3, 988244353) == 8)
+    #expect(pow_mod(2, 10, 998244353) == 1024)
+}
+@Test func MathTest() {
 
     // gcd_lcm.swift
     #expect(gcd(2, 3) == 1)
