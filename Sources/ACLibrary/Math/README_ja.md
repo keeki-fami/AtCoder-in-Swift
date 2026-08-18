@@ -8,14 +8,29 @@ let num1 = rep_pow2(2, 15) // 32768
 let num2 = rep_pow2_mod(2, 15, 2) // 第三引数で法とする整数を指定する。
 let num3 = rep_pow2_mod(2, 15) // 何も指定しない場合、法を998244353とします。
 ```
+
+
 ## ModInt.swift
 法を998244353とした整数型です。分数を用いたモジュロ演算にも対応しています。
+#### usage
+定義する際は`ModInt(_:)`あるいは`ModInt(_:_:)`を使用します。
 ```
-let num1 = ModInt(2) // 2
-let num2 = ModInt(998244352) // 998244352
-let num3 = num1 + num2 // 足し算にも対応
-print(num3) // 1
-let num4 = ModInt(1, 2) // 1/2に対してモジュロ演算を行う。
-print(num4) // 499122177
+let a = ModInt(4) // 4
+let b = ModInt(1, 2) // 499122177
 ```
-### example
+ModInt型同士の数値と四則演算が可能です。
+```
+let c = ModInt(4) + ModInt(3) // 7
+let d = ModInt(1) + ModInt(998244352) // 0
+```
+#### examples
+- [ABC471 E - Sum of Square of Sum](https://atcoder.jp/contests/abc471/submissions/78500565)
+
+## nCr.swift
+`nCrMod(n:r:mod:)`: `mod`を法とした組み合わせ計算を行います。
+#### parameters
+- `n`: 組み合わせ計算を行う集合のサイズ
+- `r`: n個の要素を持つ集合から選ぶ数
+- `mod`: 法とする数 
+#### examples
+- [ABC471 E - Sum of Square of Sum](https://atcoder.jp/contests/abc471/submissions/78500565)

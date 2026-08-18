@@ -1,5 +1,6 @@
 // 分母と分子を一回ずつ計算する
 // O(r)
+// n==0の時、0を返す
 public func nCrMod(n: Int, r: Int, mod: Int) -> Int {
 	var num = 1
 	if r == 0 {
