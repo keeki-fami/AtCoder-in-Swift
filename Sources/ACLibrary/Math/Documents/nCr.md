@@ -1,5 +1,12 @@
 # nCrMod(n:r:mod:)
 `mod`を法とした組み合わせ計算を行います。
+```
+func nCrMod(
+	n: Int
+	r: Int
+	mod: Int
+) -> Int
+```
 ### Parameters
 - `n`: 組み合わせ計算を行う集合のサイズ
 - `r`: n個の要素を持つ集合から選ぶ数
