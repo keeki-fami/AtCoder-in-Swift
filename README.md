@@ -7,7 +7,7 @@ English / [Japanese](README_ja.md)
 To achieve these goals, this library provides:
 - A SwiftUI-like coding experience
 - A variety of utility functions for AtCoderTo achieve above, this library provides you 
-# 実装内容
+# Details
 ## Math
 |内容|例|説明|
 |--|--|--|
@@ -19,3 +19,10 @@ To achieve these goals, this library provides:
 |[`factorial`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/nCr.swift)|`factorial(4) // 24 `|factorial calculation. (if $` N\leq20 `$, it takes $`O(1)`$.)|
 |[`gcd`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/gcd_lcm.swift)|`gcd(12, 8, 4) // 4 `|GCD. You can take more than two arguments.|
 |[`lcm`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/gcd_lcm.swift)|`lcm(2, 3, 5, 15) // 30 `|LCM. You can take more than two arguments.|
+# Documents
+- [Document(Math)](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/README.md)
+- [Document(Algorithm)](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Algorithm/README.md)
+# Contribution
+I appreciate issues/PRs if you report my mistakes like typo, bugs and so on.
+# Lisences
+CC0
