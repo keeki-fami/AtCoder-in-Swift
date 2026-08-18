@@ -25,3 +25,9 @@
 |内容|説明|
 |--|--|
 |[`DP2D`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Algorithms/DP/Dp2D.swift)|二次元配列を用いるDPを宣言的に実装する|
+# Documents
+- [Document(Math)](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/README_ja.md)
+- [Document(Algorithm)](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Algorithms/README_ja.md)
+# Contribution
+もしバグやtypoを見つけた場合は、issueやPull Request大歓迎です。
+# License
