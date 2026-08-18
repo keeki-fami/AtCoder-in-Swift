@@ -18,4 +18,6 @@ let b = floorDiv(5,3) // 1
 let b = floorDiv(2,0) // nil
 ```
 負の分数に対しても、適切に求めることができます。$` \lfloor - \frac{5}{3} \rfloor `$を求めたい場合、`floorDiv(-5, 3)`または、`floorDiv(5, -3)`を渡してください。
+### Examples
+- [ABC465 D - X to Y](https://atcoder.jp/contests/abc465/submissions/78503490)
 ### See Also
