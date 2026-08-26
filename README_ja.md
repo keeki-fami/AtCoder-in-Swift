@@ -27,8 +27,8 @@
 |[`DP2D`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Algorithms/DP/Dp2D.swift)|二次元DP|
 |[`BinarySearch`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Algorithms/BinarySearch/BinarySearch.swift)|二分探索|
 # Documents
-- [ドキュメント(Math)](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/README_ja.md)
-- [ドキュメント(Algorithm)](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Algorithms/README_ja.md)
+- [ドキュメント(Math)](./Sources/AtCoderInSwift/Math/README_ja.md)
+- [ドキュメント(Algorithm)](./Sources/AtCoderInSwift/Algo/README_ja.md)
 # Contribution
 もしバグやtypoを見つけた場合は、issueやPull Request大歓迎です。
 # License
