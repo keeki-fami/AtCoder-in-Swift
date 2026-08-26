@@ -11,7 +11,7 @@ public func nCrMod(n: Int, r: Int, mod: Int) -> Int {
 		num %= mod
 	}
 	for j in 1...r {
-		num *= pow_mod(j, mod-2, mod)
+		num *= powMod(j, mod-2, mod)
 		num%=mod
 	}
 	return num

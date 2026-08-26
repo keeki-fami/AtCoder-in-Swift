@@ -45,9 +45,9 @@ struct FloorCeilTest {
 
 struct PowTest {
     @Test func powTest() {
-        #expect(pow_d(2, 0) == 1)
-        #expect(pow_mod(2, 3, 988_244_353) == 8)
-        #expect(pow_mod(2, 10, 998_244_353) == 1024)
+        #expect(powN(2, 0) == 1)
+        #expect(powMod(2, 3, 988_244_353) == 8)
+        #expect(powMod(2, 10, 998_244_353) == 1024)
     }
 }
 @Test func MathTest() {

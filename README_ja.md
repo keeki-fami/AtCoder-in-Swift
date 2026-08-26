@@ -15,7 +15,7 @@
 |[`floorDiv`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/floor_ceil.swift)|`floorDiv(5, 2) // 2`|床関数|
 |[`ceilDiv`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/floor_ceil.swift)|`ceilDiv(5, 2) // 3`|天井関数|
 |[`ModInt`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/modint.swift)|`ModInt(998244354) // 1 `|$` 998244353 `$を法とするモジュロ演算|
-|[`rep_pow2`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/pow.swift)|`rep_pow2(2, 5) // 32 `|冪乗計算。$`a^{p}`$の計算には$` O( \log p ) `$かかる。|
+|[`powN`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/pow.swift)|`powN(2, 5) // 32 `|冪乗計算。$`a^{p}`$の計算には$` O( \log p ) `$かかる。|
 |[`nCr`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/nCr.swift)|`nCr(4, 2) // 6 `|組み合わせの計算。$` {}_n C_k `$の計算には$`O( k )`$かかる。|
 |[`factorial`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/nCr.swift)|`factorial(4) // 24 `|階乗計算。$` N\leq20 `$の場合は$`O(1)`$|
 |[`gcd`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/gcd_lcm.swift)|`gcd(12, 8, 4) // 4 `|最大公約数。2つ以上の引数を取れる。|
