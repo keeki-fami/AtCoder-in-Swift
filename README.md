@@ -19,6 +19,11 @@ To achieve these goals, this library provides:
 |[`factorial_mod`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/nCr.swift)|`factorial(4) // 24 `|factorial calculation. (if $` N\leq20 `$, it takes $`O(1)`$.)|
 |[`gcd`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/gcd_lcm.swift)|`gcd(12, 8, 4) // 4 `|GCD. You can take more than two arguments.|
 |[`lcm`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/gcd_lcm.swift)|`lcm(2, 3, 5, 15) // 30 `|LCM. You can take more than two arguments.|
+## Algorithm
+|内容|説明|
+|--|--|
+|[`DP2D`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Algorithms/DP/Dp2D.swift)|two dimentional DP|
+|[`BinarySearch`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Algorithms/BinarySearch/BinarySearch.swift)|binary search|
 # Documents
 - [Document(Math)](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/README.md)
 - [Document(Algorithm)](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Algorithm/README.md)
