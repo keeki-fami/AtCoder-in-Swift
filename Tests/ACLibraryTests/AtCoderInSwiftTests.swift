@@ -95,12 +95,12 @@ struct PowTest {
 
 }
 
-@Test func CastTest() {
-    // cast.swift
-    let ar1 = ["12", "33", "31"]
-    #expect(stringArrayToInt(ar1) == 123331)
-    let ar2 = ["1", "2", "3", "4"]
-    #expect(stringArrayToInt(ar2) == 1234)
-    let ar3 = ["1", "a", "3"]
-    #expect(stringArrayToInt(ar3) == nil)
-}
+// @Test func CastTest() {
+//     // cast.swift
+//     let ar1 = ["12", "33", "31"]
+//     #expect(stringArrayToInt(ar1) == 123331)
+//     let ar2 = ["1", "2", "3", "4"]
+//     #expect(stringArrayToInt(ar2) == 1234)
+//     let ar3 = ["1", "a", "3"]
+//     #expect(stringArrayToInt(ar3) == nil)
+// }

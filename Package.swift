@@ -20,7 +20,7 @@ let package = Package(
         ),
         .testTarget(
             name: "ACLibraryTests",
-            dependencies: ["Math", "Algorithms"]
+            dependencies: ["AtCoderInSwift"]
         ),
     ],
     swiftLanguageModes: [.v6]
