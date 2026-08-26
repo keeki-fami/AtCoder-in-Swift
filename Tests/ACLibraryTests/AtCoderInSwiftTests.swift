@@ -14,20 +14,41 @@ struct ModIntTest {
         #expect(y == 10)
         var z = ModInt(2)
         z.inverse()
-        #expect(z == 499122177)
+        #expect(z == 499_122_177)
     }
 
     @Test func AddTest() {
         let x = ModInt(15)
         let y = ModInt(17)
-        #expect(x+y == 32)
+        #expect(x + y == 32)
     }
 }
 
+struct FloorCeilTest {
+    @Test func FloorTest() {
+        // TODO
+        // 割り切れる 4/2 = 2
+        // 割り切れない (5/2) = 2.5 → 2
+        // 割り切れる -4/2 = 4/-2 = -2
+        // 割り切れない -5/2 = 5/-2 = -2.5 → -3
+        // 分母が0 4/0 = nil
+        #expect(floorDiv(4, 2) == 2)
+        #expect(floorDiv(5, 2) == 2)
+        #expect(floorDiv(-4, 2) == floorDiv(4, -2))
+        #expect(floorDiv(-4, 2) == -2)
+        #expect(floorDiv(-5, 2) == floorDiv(5, -2))
+        #expect(floorDiv(-5, 2) == -3)
+        #expect(floorDiv(4, 0) == nil)
+    }
+
+}
+
 struct PowTest {
-    #expect(pow_d(2,0) == 1)
-    #expect(pow_mod(2, 3, 988244353) == 8)
-    #expect(pow_mod(2, 10, 998244353) == 1024)
+    @Test func powTest() {
+        #expect(pow_d(2, 0) == 1)
+        #expect(pow_mod(2, 3, 988_244_353) == 8)
+        #expect(pow_mod(2, 10, 998_244_353) == 1024)
+    }
 }
 @Test func MathTest() {
 
@@ -48,13 +69,13 @@ struct PowTest {
     // ne/ne 割り切れない
     // ne/ne 割り切れる
     // R / 0 nilを返す
-    #expect(ceilDiv(6,3) == Optional(2))
-    #expect(ceilDiv(6,4) == Optional(2))
-    #expect(ceilDiv(-6,3) == Optional(-2))
-    #expect(ceilDiv(-6,4) == Optional(-1))
-    #expect(ceilDiv(-6,-3) == Optional(2))
-    #expect(ceilDiv(-6,-4) == Optional(2))
-    #expect(ceilDiv(12,0) == nil)
+    #expect(ceilDiv(6, 3) == Optional(2))
+    #expect(ceilDiv(6, 4) == Optional(2))
+    #expect(ceilDiv(-6, 3) == Optional(-2))
+    #expect(ceilDiv(-6, 4) == Optional(-1))
+    #expect(ceilDiv(-6, -3) == Optional(2))
+    #expect(ceilDiv(-6, -4) == Optional(2))
+    #expect(ceilDiv(12, 0) == nil)
 
     // floor
     // po/po 割り切れる
@@ -64,13 +85,13 @@ struct PowTest {
     // ne/ne 割り切れない
     // ne/ne 割り切れる
     // R / 0 nilを返す
-    #expect(floorDiv(12,4) == Optional(3))
-    #expect(floorDiv(12,5) == Optional(2))
-    #expect(floorDiv(-12,4) == Optional(-3))
-    #expect(floorDiv(-12,5) == Optional(-3))
-    #expect(floorDiv(-6,-3) == Optional(2))
-    #expect(floorDiv(-6,-4) == Optional(1))
-    #expect(floorDiv(12,0) == nil)
+    #expect(floorDiv(12, 4) == Optional(3))
+    #expect(floorDiv(12, 5) == Optional(2))
+    #expect(floorDiv(-12, 4) == Optional(-3))
+    #expect(floorDiv(-12, 5) == Optional(-3))
+    #expect(floorDiv(-6, -3) == Optional(2))
+    #expect(floorDiv(-6, -4) == Optional(1))
+    #expect(floorDiv(12, 0) == nil)
 
 }
 

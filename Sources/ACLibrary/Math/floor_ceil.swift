@@ -1,4 +1,4 @@
-public func ceilDiv(_ x: Int, _ y: Int) -> Int? {
+@inline(__always) public func ceilDiv(_ x: Int, _ y: Int) -> Int? {
 	var _x = x
 	var _y = y
 
@@ -24,7 +24,7 @@ public func ceilDiv(_ x: Int, _ y: Int) -> Int? {
 	}
 }
 
-public func floorDiv(_ x: Int, _ y: Int) -> Int? {
+@inline(__always) public func floorDiv(_ x: Int, _ y: Int) -> Int? {
 	var _x = x
 	var _y = y
 

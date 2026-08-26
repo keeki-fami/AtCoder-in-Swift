@@ -21,3 +21,4 @@ let b = floorDiv(2,0) // nil
 ### Examples
 - [ABC465 D - X to Y](https://atcoder.jp/contests/abc465/submissions/78503490)
 ### See Also
+- [ceilDiv(\_:\_:) | Math/floor_ceil.swift](ceil.md)
