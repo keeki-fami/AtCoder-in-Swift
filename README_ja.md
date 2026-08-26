@@ -12,20 +12,20 @@
 ## Math
 |内容|例|説明|
 |--|--|--|
-|[`floorDiv`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/floor_ceil.swift)|`floorDiv(5, 2) // 2`|床関数|
-|[`ceilDiv`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/floor_ceil.swift)|`ceilDiv(5, 2) // 3`|天井関数|
-|[`ModInt`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/modint.swift)|`ModInt(998244354) // 1 `|$` 998244353 `$を法とするモジュロ演算|
-|[`powN`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/pow.swift)|`powN(2, 5) // 32 `|冪乗計算。$`a^{p}`$の計算には$` O( \log p ) `$かかる。|
-|[`nCr`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/nCr.swift)|`nCr(4, 2) // 6 `|組み合わせの計算。$` {}_n C_k `$の計算には$`O( k )`$かかる。|
-|[`factorial`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/nCr.swift)|`factorial(4) // 24 `|階乗計算。$` N\leq20 `$の場合は$`O(1)`$|
-|[`gcd`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/gcd_lcm.swift)|`gcd(12, 8, 4) // 4 `|最大公約数。2つ以上の引数を取れる。|
-|[`lcm`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Math/gcd_lcm.swift)|`lcm(2, 3, 5, 15) // 30 `|最小公倍数。2つ以上の引数を取れる。|
+|[`floorDiv`](./Sources/AtCoderInSwift/Math/Documents/floor.md)|`floorDiv(5, 2) // 2`|床関数|
+|[`ceilDiv`](./Sources/AtCoderInSwift/Math/Documents/ceil.md)|`ceilDiv(5, 2) // 3`|天井関数|
+|[`ModInt`](./Sources/AtCoderInSwift/Math/Documents/modint.md)|`ModInt(998244354) // 1 `|$` 998244353 `$を法とするモジュロ演算|
+|`powN`|`powN(2, 5) // 32 `|冪乗計算。$`a^{p}`$の計算には$` O( \log p ) `$かかる。|
+|[`nCr`](./Sources/AtCoderInSwift/Math/Documents/nCr.md)|`nCr(4, 2) // 6 `|組み合わせの計算。$` {}_n C_k `$の計算には$`O( k )`$かかる。|
+|`factorial`|`factorial(4) // 24 `|階乗計算。$` N\leq20 `$の場合は$`O(1)`$|
+|`gcd`|`gcd(12, 8, 4) // 4 `|最大公約数。2つ以上の引数を取れる。|
+|`lcm`|`lcm(2, 3, 5, 15) // 30 `|最小公倍数。2つ以上の引数を取れる。|
 
 ## Algorithm
 |内容|説明|
 |--|--|
-|[`DP2D`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Algorithms/DP/Dp2D.swift)|二次元DP|
-|[`BinarySearch`](https://github.com/keeki-fami/AtCoder-in-Swift/blob/main/Sources/ACLibrary/Algorithms/BinarySearch/BinarySearch.swift)|二分探索|
+|[`DP2D`](./Sources/AtCoderInSwift/Algo/Documents/DP2D.md)|二次元DP|
+|[`BinarySearch`](./Sources/AtCoderInSwift/Algo/Documents/BinarySearch.md)|二分探索|
 # Documents
 - [ドキュメント(Math)](./Sources/AtCoderInSwift/Math/README_ja.md)
 - [ドキュメント(Algorithm)](./Sources/AtCoderInSwift/Algo/README_ja.md)
