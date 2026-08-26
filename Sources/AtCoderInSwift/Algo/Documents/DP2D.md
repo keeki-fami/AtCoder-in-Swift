@@ -1,20 +1,21 @@
 # DP2D
-動的計画法の宣言的な実装を補助する構造体
+A structure that supports declarative implementation of dynamic programming using two-dimentional array.
 ### Discussion
-二次元配列を用いるDPの実装の際に使用できます。定型的な実装部分を減らし、宣言的な実装を補助します。
+You can use `DP2D` on problems which can be solved by DP. `DP2D` provides us easy declarative implementation by reducing routine source code.
 
 ```Swift
-	// n行2列の二次元配列を用いるDP
-	// 第一引数: 行数
-	// 第二引数: 列数
-	// 第三引数: 初期化に用いる整数
-	DP2D(n, 2, 0)
-		.loop(
-			// loopメソッド内では、以下の3つの関数を引数に渡します。
-			// before: 配列操作を行う前の前処理を行います。
-			// body: 配列の操作を行います。
-			// complete: 行ごとにforループを抜けた際に行う操作を行います（例: 答えを格納する変数の更新）
-		)
+// DP using an n-by-2 two-dimensional array
+// First argument: Number of rows
+// Second argument: Number of columns
+// Third argument: Integer used to initialize the array
+DP2D(n, 2, 0)
+    .loop(
+        // The loop method takes the following three functions as arguments:
+        // before: Performs preprocessing before manipulating the array.
+        // body: Performs operations on the array.
+        // complete: Performs an operation after the loop for each row completes
+        //           (e.g., updating a variable that stores the answer).
+    )
 ```
 ### Example
 - [ABC464 D - Celester](https://atcoder.jp/contests/abc464/submissions/78157261)
