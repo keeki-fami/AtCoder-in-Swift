@@ -1,4 +1,4 @@
-public struct BitFullSearch {
+struct BitFullSearch {
 	var bit: Int
 	var n: Int
 
