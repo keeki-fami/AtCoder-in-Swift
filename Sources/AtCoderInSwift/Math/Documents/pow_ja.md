@@ -1,7 +1,7 @@
 # powMod(\_:\_:\_:)
 冪乗計算を行います。
 ```
-func pow_mod(
+func powMod(
 	_ a: Int
 	_ po: Int
 	_ mod: Int?

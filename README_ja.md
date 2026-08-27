@@ -19,8 +19,8 @@
 |[`powMod`](./Sources/AtCoderInSwift/Math/Documents/pow_ja.md)|`powMod(2, 5, 998244353) // 32 `|冪乗計算。$`a^{p} \mod N`$の計算には$` O( \log p ) `$かかる。|
 |[`nCrMod`](./Sources/AtCoderInSwift/Math/Documents/nCr_ja.md)|`nCrMod(4, 2) // 6 `|組み合わせの計算。$` {}_n C_k `$の計算には$`O( k )`$かかる。|
 |`factorial`|`factorial(4) // 24 `|階乗計算。$` N\leq20 `$の場合は$`O(1)`$|
-|`gcd`|`gcd(12, 8, 4) // 4 `|最大公約数。2つ以上の引数を取れる。|
-|`lcm`|`lcm(2, 3, 5, 15) // 30 `|最小公倍数。2つ以上の引数を取れる。|
+|[`gcd`](./Sources/AtCoderInSwift/Math/Documents/gcd_ja.md)|`gcd(12, 8, 4) // 4 `|最大公約数。2つ以上の引数を取れる。|
+|[`lcm`](./Sources/AtCoderInSwift/Math/Documents/lcm_ja.md)|`lcm(2, 3, 5, 15) // 30 `|最小公倍数。2つ以上の引数を取れる。|
 
 ## Algorithm
 |内容|説明|

@@ -1,7 +1,7 @@
 # DP2D
-A structure that supports declarative implementation of dynamic programming using two-dimentional array.
+A structure that supports declarative implementation of dynamic programming using a two-dimensional array.
 ### Discussion
-You can use `DP2D` on problems which can be solved by DP. `DP2D` provides us easy declarative implementation by reducing routine source code.
+`DP2D` makes it easier to implement dynamic programming declaratively by reducing boilerplate code.
 
 ```Swift
 // DP using an n-by-2 two-dimensional array

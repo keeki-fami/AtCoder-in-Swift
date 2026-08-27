@@ -5,3 +5,5 @@
 - [ModInt | Math/ModInt.swift](Documents/modint_ja.md)
 - [nCrMod(n:r:mod:) | Math/nCr.swift](Documents/nCr_ja.md)
 - [pow_mod(\_:\_:\_:) | Math/pow.swift](Documents/pow_ja.md)
+- [gcd(\_:) | Math/gcd_lcm.swift](Documents/gcd_ja.md)
+- [lcm(\_:) | Math/gcd_lcm.swift](Documents/lcm_ja.md)
