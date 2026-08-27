@@ -12,11 +12,12 @@
 ## Math
 |内容|例|説明|
 |--|--|--|
-|[`floorDiv`](./Sources/AtCoderInSwift/Math/Documents/floor.md)|`floorDiv(5, 2) // 2`|床関数|
-|[`ceilDiv`](./Sources/AtCoderInSwift/Math/Documents/ceil.md)|`ceilDiv(5, 2) // 3`|天井関数|
-|[`ModInt`](./Sources/AtCoderInSwift/Math/Documents/modint.md)|`ModInt(998244354) // 1 `|$` 998244353 `$を法とするモジュロ演算|
+|[`floorDiv`](./Sources/AtCoderInSwift/Math/Documents/floor_ja.md)|`floorDiv(5, 2) // 2`|床関数|
+|[`ceilDiv`](./Sources/AtCoderInSwift/Math/Documents/ceil_ja.md)|`ceilDiv(5, 2) // 3`|天井関数|
+|[`ModInt`](./Sources/AtCoderInSwift/Math/Documents/modint_ja.md)|`ModInt(998244354) // 1 `|$` 998244353 `$を法とするモジュロ演算|
 |`powN`|`powN(2, 5) // 32 `|冪乗計算。$`a^{p}`$の計算には$` O( \log p ) `$かかる。|
-|[`nCrMod`](./Sources/AtCoderInSwift/Math/Documents/nCr.md)|`nCrMod(4, 2) // 6 `|組み合わせの計算。$` {}_n C_k `$の計算には$`O( k )`$かかる。|
+|[`powMod`](./Sources/AtCoderInSwift/Math/Documents/pow_ja.md)|`powMod(2, 5, 998244353) // 32 `|冪乗計算。$`a^{p} \mod N`$の計算には$` O( \log p ) `$かかる。|
+|[`nCrMod`](./Sources/AtCoderInSwift/Math/Documents/nCr_ja.md)|`nCrMod(4, 2) // 6 `|組み合わせの計算。$` {}_n C_k `$の計算には$`O( k )`$かかる。|
 |`factorial`|`factorial(4) // 24 `|階乗計算。$` N\leq20 `$の場合は$`O(1)`$|
 |`gcd`|`gcd(12, 8, 4) // 4 `|最大公約数。2つ以上の引数を取れる。|
 |`lcm`|`lcm(2, 3, 5, 15) // 30 `|最小公倍数。2つ以上の引数を取れる。|
@@ -32,3 +33,4 @@
 # Contribution
 もしバグやtypoを見つけた場合は、issueやPull Request大歓迎です。
 # License
+CC0
