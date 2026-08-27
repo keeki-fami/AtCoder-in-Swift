@@ -17,7 +17,7 @@ public func nCrMod(n: Int, r: Int, mod: Int) -> Int {
 	return num
 }
 
-public func factorial_mod(_ n: Int) -> Int {
+public func factorialMod(_ n: Int) -> Int {
 	var num = 1
 	let factorialLen = factorialTable.count - 1
 	for i in stride(from: n, to: -1, by: -1) {
