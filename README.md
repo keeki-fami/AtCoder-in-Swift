@@ -11,18 +11,18 @@ To achieve these goals, this library provides:
 ## Math
 |内容|例|説明|
 |--|--|--|
-|`floorDiv`|`floorDiv(5, 2) // 2`|floor function|
-|`ceilDiv`|`ceilDiv(5, 2) // 3`|ceiling function|
-|`ModInt`|`ModInt(998244354) // 1 `|modular arithmetic with modulus $` 998244353 `$|
+|[`floorDiv`](./Sources/AtCoderInSwift/Math/Documents/floor.md)|`floorDiv(5, 2) // 2`|floor function|
+|[`ceilDiv`](./Sources/AtCoderInSwift/Math/Documents/ceil.md)|`ceilDiv(5, 2) // 3`|ceiling function|
+|[`ModInt`](./Sources/AtCoderInSwift/Math/Documents/modint.md)|`ModInt(998244354) // 1 `|modular arithmetic with modulus $` 998244353 `$|
 |`pow_d`|`rep_pow2(2, 5) // 32 `|power calculation (calculate $`a^{p}`$ : $` O( \log p ) `$)|
-|`nCrMod`|`nCr(4, 2) // 6 `|combination ( calculate $` {}_n C_k `$ : $`O( k )`$)|
+|[`nCrMod`](./Sources/AtCoderInSwift/Math/Documents/nCr.md)|`nCr(4, 2, 998244353) // 6 `|combination ( calculate $` {}_n C_r \mod M`$ : $`O( r )`$)|
 |`factorial_mod`|`factorial(4) // 24 `|factorial calculation. (if $` N\leq20 `$, it takes $`O(1)`$.)|
 |`gcd`|`gcd(12, 8, 4) // 4 `|GCD. You can take more than two arguments.|
 |`lcm`|`lcm(2, 3, 5, 15) // 30 `|LCM. You can take more than two arguments.|
 ## Algorithm
 |内容|説明|
 |--|--|
-|[`DP2D`](./Sources/AtCoderInSwift/Algo/Documents/DP2D.md))|two dimentional DP|
+|[`DP2D`](./Sources/AtCoderInSwift/Algo/Documents/DP2D.md)|two dimentional DP|
 |`BinarySearch`|binary search|
 # Documents
 - [Document(Math)](./Sources/AtCoderInSwift/Math/README.md)

@@ -1,5 +1,6 @@
 English / [Japanese](README_ja.md)
 # Document (Math)
-- ModInt | Math/ModInt.swift
-- nCrMod(n:r:mod:) | Math/nCr.swift
-- pow_mod(_ :,_ :, _:) | Math/pow.swift
+- [floorDiv(\_:\_:) | Math/floor_ceil.swift](Documents/floor.md)
+- [ceilDiv(\_:\_:) | Math/floor_ceil.swift](Documents/ceil.md)
+- [ModInt | Math/ModInt.swift](Documents/modint.md)
+- [nCrMod(n:r:mod:) | Math/nCr.swift](Documents/nCr.md)
