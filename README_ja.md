@@ -21,7 +21,6 @@
 |[`factorialMod`](./Sources/AtCoderInSwift/Math/Documents/factorialMod_ja.md)|`factorialMod(4) // 24 `|階乗計算。$` N\leq20 `$の場合は$`O(1)`$|
 |[`gcd`](./Sources/AtCoderInSwift/Math/Documents/gcd_ja.md)|`gcd(12, 8, 4) // 4 `|最大公約数。2つ以上の引数を取れる。|
 |[`lcm`](./Sources/AtCoderInSwift/Math/Documents/lcm_ja.md)|`lcm(2, 3, 5, 15) // 30 `|最小公倍数。2つ以上の引数を取れる。|
-
 ## Algorithm
 |内容|説明|
 |--|--|
