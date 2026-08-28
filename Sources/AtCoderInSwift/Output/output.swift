@@ -1,6 +1,6 @@
-public func printArrayToString(_ l: [Any]) {
+public func printArray(_ l: [Any], gap: String = "") {
 	for i in l {
-		print("\(i)", terminator: "")
+		print("\(i)", terminator: gap)
 	}
 	print("")
 }
