@@ -24,6 +24,14 @@ public func printArrayYN<Element>(_ l: [Element], judge: (Element) -> Bool) {
 	}
 }
 
+public func customPrintTF(_ judge: () -> Bool, t: String, f: String) {
+	if judge() {
+		print(t)
+	} else {
+		print(f)
+	}
+}
+
 public func printYN(_ judge: () -> Bool) {
 	if judge() {
 		print("Yes")
