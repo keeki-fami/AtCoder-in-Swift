@@ -24,8 +24,8 @@ public func printArrayYN<Element>(_ l: [Element], judge: (Element) -> Bool) {
 	}
 }
 
-public func printYN(_ judge: Bool) {
-	if judge {
+public func printYN(_ judge: () -> Bool) {
+	if judge() {
 		print("Yes")
 	} else {
 		print("No")
