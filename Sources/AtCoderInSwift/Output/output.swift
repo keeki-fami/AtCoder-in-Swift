@@ -13,3 +13,29 @@ public func print2DArray(_ s: [[Any]], gap: String = "") {
 		print("")
 	}
 }
+
+public func printArrayYN<Element>(_ l: [Element], judge: (Element) -> Bool) {
+	for val in l {
+		if judge(val) {
+			printY()
+		} else {
+			printN()
+		}
+	}
+}
+
+public func printYN(_ judge: Bool) {
+	if judge {
+		print("Yes")
+	} else {
+		print("No")
+	}
+}
+
+public func printY() {
+	print("Yes")
+}
+
+public func printN() {
+	print("No")
+}
