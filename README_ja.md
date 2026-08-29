@@ -29,6 +29,7 @@
 # Documents
 - [ドキュメント(Math)](./Sources/AtCoderInSwift/Math/README_ja.md)
 - [ドキュメント(Algorithm)](./Sources/AtCoderInSwift/Algo/README_ja.md)
+- [ドキュメント(Output)](./Sources/AtCoderInSwift/Output/README_ja.md)
 # Contribution
 もしバグやtypoを見つけた場合は、issueやPull Request大歓迎です。
 # License
