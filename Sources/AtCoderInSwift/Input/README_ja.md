@@ -1,7 +1,7 @@
 [English](README.md) / **Japanese**
 # ドキュメント (Output)
-- [getInt() | Input/input.swift](Documents/customPrintTF_ja.md)
-- [getString() | Input/input.swift](Documents/print2DArray_ja.md)
-- [getIntArray() | Input/input.swift](Documents/printArray_ja.md)
-- [getStringArray() | Input/input.swift](Documents/printArrayYN_ja.md)
-- [getIntTupple2() | Input/input.swift](Documents/printN_ja.md)
+- [getInt() | Input/input.swift](Documents/getInt_ja.md)
+- [getString() | Input/input.swift](Documents/getString_ja.md)
+- [getIntArray() | Input/input.swift](Documents/getIntArray_ja.md)
+- [getStringArray() | Input/input.swift](Documents/getStringArray_ja.md)
+- [getIntTuple2() | Input/input.swift](Documents/getIntTuple2_ja.md)
