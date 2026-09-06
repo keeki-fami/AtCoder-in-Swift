@@ -25,6 +25,8 @@ To achieve these goals, this library provides:
 |--|--|
 |[`DP2D`](./Sources/AtCoderInSwift/Algo/Documents/DP2D.md)|two dimentional DP|
 |`BinarySearch`|binary search|
+|`PrefixSum`|prefix sum|
+|`Graph`|graph structure|
 # Documents
 - [Document(Math)](./Sources/AtCoderInSwift/Math/README.md)
 - [Document(Algorithm)](./Sources/AtCoderInSwift/Algo/README.md)

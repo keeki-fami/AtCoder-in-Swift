@@ -26,6 +26,8 @@
 |--|--|
 |[`DP2D`](./Sources/AtCoderInSwift/Algo/Documents/DP2D_ja.md)|二次元DP|
 |[`BinarySearch`](./Sources/AtCoderInSwift/Algo/Documents/BinarySearch_ja.md)|二分探索|
+|`PrefixSum`|累積和|
+|`Graph`|グラフ作成|
 # Documents
 - [ドキュメント(Math)](./Sources/AtCoderInSwift/Math/README_ja.md)
 - [ドキュメント(Algorithm)](./Sources/AtCoderInSwift/Algo/README_ja.md)
