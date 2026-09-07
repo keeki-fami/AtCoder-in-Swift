@@ -2,7 +2,6 @@ public struct PrefixSum {
 	private let _prefixSum: [Int]
 	public init(_ list: [Int]) {
 		let n = list.count
-
 		precondition(n >= 1, "the length of the list must be more than 0.")
 
 		var prefixSum = [0] + list
