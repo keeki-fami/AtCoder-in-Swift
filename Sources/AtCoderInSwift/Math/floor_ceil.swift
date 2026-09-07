@@ -6,7 +6,7 @@
 		return nil
 	}
 
-	if _x * _y > 0 {
+	if (_x >= 0 && _y > 0) || (_x < 0 && _y < 0 ){
 		_x = abs(_x)
 		_y = abs(_y)
 
@@ -32,7 +32,7 @@
 		return nil
 	}
 
-	if _x * _y > 0 {
+	if (_x >= 0 && _y > 0) || (_x < 0 && _y < 0) {
 		_x = abs(_x)
 		_y = abs(_y)
 
