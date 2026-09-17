@@ -27,11 +27,18 @@
 |[`DP2D`](./Sources/AtCoderInSwift/Algo/Documents/DP2D_ja.md)|二次元DP|
 |[`BinarySearch`](./Sources/AtCoderInSwift/Algo/Documents/BinarySearch_ja.md)|二分探索|
 |`Graph`|グラフ作成|
+|`imos1D`|一次元imos法|
+|`UnionFind`|Union-Find|
 |[`PrefixSum`](./Sources/AtCoderInSwift/Algo/Documents/PrefixSum_ja.md)|累積和|
+# Input
+各種標準入力用関数
+|`getInt`|Int型の値を取得|
+|`getString`|String型の値を取得|
+etc
 # Documents
 - [ドキュメント(Math)](./Sources/AtCoderInSwift/Math/README_ja.md)
 - [ドキュメント(Algorithm)](./Sources/AtCoderInSwift/Algo/README_ja.md)
-- [ドキュメント(Output)](./Sources/AtCoderInSwift/Output/README_ja.md)
+- [ドキュメント(Input)](./Sources/AtCoderInSwift/Input/README_ja.md)
 # Contribution
 もしバグやtypoを見つけた場合は、issueやPull Request大歓迎です。
 # License
