@@ -94,3 +94,13 @@ struct PowTest {
     #expect(floorDiv(12, 0) == nil)
 
 }
+
+struct PrefixSumTest {
+    @Test func prefixSumTest() {
+        let prefix1 = PrefixSum([1,4,5,6])
+        let prefix2 = PrefixSum([4,4,-4,2])
+        #expect(prefix1[0, 2] == 5)
+        #expect(prefix1[1, 3] == 9)
+        #expect(prefix2[0, 3] == 4)
+    }
+}
