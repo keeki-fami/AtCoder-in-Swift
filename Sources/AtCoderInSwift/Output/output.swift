@@ -1,3 +1,4 @@
+import Foundation
 public func printArray(_ l: [Any], gap: String = "") {
 	for i in l {
 		print("\(i)", terminator: gap)
@@ -67,25 +68,30 @@ public func printN() {
 @MainActor
 struct FastOutput {
 	static var string = ""
+	static var buffer: [UInt8] = .init()
 	static func add(_ str: String, _ separator: String = "") {
-		string += (str + separator)
+		buffer.append(contentsOf: str.utf8)
+		buffer.append(contentsOf: separator.utf8)
 	}
 
 	static func addLine(_ str: String, _ separator: String = "") {
-		string += (str + separator)
-		string += "\n"
+		buffer.append(contentsOf: str.utf8)
+		buffer.append(contentsOf: separator.utf8)
+		buffer.append(contentsOf: "\n".utf8)
 	}
 
 	static func add(_ int: Int, _ separator: String = "") {
-		string += ("\(int)" + separator)
+		buffer.append(contentsOf: "\(int)".utf8) // TODO: Int → (ASCII) → UInt8
+		buffer.append(contentsOf: separator.utf8)
 	}
 
 	static func addLine(_ int: Int, _ separator: String = "") {
-		string += ("\(int)" + separator)
-		string += "\n"
+		buffer.append(contentsOf: "\(int)".utf8)
+		buffer.append(contentsOf: separator.utf8)
+		buffer.append(contentsOf: "\n".utf8)
 	}
 	static func out() {
-		print(string, separator: "")
-		string = ""
+		FileHandle.standardOutput.write(Data(buffer))
+		buffer = .init()
 	}
 }
