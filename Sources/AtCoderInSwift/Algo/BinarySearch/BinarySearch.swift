@@ -101,3 +101,38 @@ public struct BinarySearch<Element> {
 	}
 
 }
+func binarySearchLeft(_ num: Int, _ array: [Int]) -> Int {
+    var high = array.count
+    var low = -1
+
+    while (low + 1 < high) {
+        var middle = (high + low) / 2
+        print(array)
+        print("num: \(num), array[middle]: \(array[middle]), middle: \(middle)")
+        if num <= array[middle] {
+            high = middle
+        } else {
+            low = middle
+        }
+    }
+
+    return high
+}
+
+func binarySearchRight(_ num: Int, _ array: [Int]) -> Int {
+    var high = array.count
+    var low = -1
+
+    while (low + 1 < high) {
+        var middle = (high + low) / 2
+        print(array)
+        print("num: \(num), array[middle]: \(array[middle]), middle: \(middle)")
+        if num < array[middle] {
+            high = middle
+        } else {
+            low = middle
+        }
+    }
+
+    return high
+}
