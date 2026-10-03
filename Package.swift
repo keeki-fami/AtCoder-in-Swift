@@ -25,7 +25,7 @@ let package = Package(
             ]
         ),
         .testTarget(
-            name: "ACLibraryTests",
+            name: "AtCoderInSwiftTests",
             dependencies: ["AtCoderInSwift"]
         ),
     ],

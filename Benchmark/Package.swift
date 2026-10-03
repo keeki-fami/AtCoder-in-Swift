@@ -7,7 +7,8 @@ let package = Package(
     name: "BenchmarkChecker",
     dependencies: [
         .package(url: "https://github.com/google/swift-benchmark", from: "0.1.2"),
-        .package(url: "https://github.com/keeki-fami/AtCoder-in-Swift", from: "0.1.3")
+        // .package(url: "https://github.com/keeki-fami/AtCoder-in-Swift", from: "0.1.4")
+        .package(name: "AtCoder-in-Swift", path: "../")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -16,6 +17,8 @@ let package = Package(
             name: "BenchmarkChecker",
             dependencies: [
                 .product(name: "Benchmark", package: "swift-benchmark"),
+                // .product(name: "AtCoderInSwift", package: "AtCoder-in-Swift")
+                // .product(name: "AtCoderInSwift", path: ../)
                 .product(name: "AtCoderInSwift", package: "AtCoder-in-Swift")
             ]
         ),

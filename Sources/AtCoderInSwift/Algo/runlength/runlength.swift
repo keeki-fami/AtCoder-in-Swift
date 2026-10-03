@@ -1,9 +1,9 @@
 public func runlengthEncode(_ s: String) -> [(Character, Int)]? {
-	if s.count == 0 {
+	guard let firstCh = s.first else {
 		return nil
 	}
 	var table: [(Character, Int)] = .init()
-	var nowCharacter: Character = s.first!
+	var nowCharacter: Character = firstCh
 	var count = 0
 	for ch in s {
 		if ch == nowCharacter {
