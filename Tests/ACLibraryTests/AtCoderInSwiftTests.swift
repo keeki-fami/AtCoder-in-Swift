@@ -104,3 +104,120 @@ struct PrefixSumTest {
         #expect(prefix2[0, 3] == 4)
     }
 }
+
+struct RunlengthEncodeTests {
+
+    @Test
+    func emptyStringReturnsNil() {
+        let result = runlengthEncode("")
+
+        #expect(result == nil)
+    }
+
+    @Test
+    func singleCharacter() {
+        let result = runlengthEncode("a")
+
+        #expect(result != nil)
+        #expect(result!.count == 1)
+        #expect(result![0].0 == "a")
+        #expect(result![0].1 == 1)
+    }
+
+    @Test
+    func consecutiveSameCharacters() {
+        let result = runlengthEncode("aaa")
+
+        #expect(result != nil)
+        #expect(result!.count == 1)
+        #expect(result![0].0 == "a")
+        #expect(result![0].1 == 3)
+    }
+
+    @Test
+    func multipleRuns() {
+        let result = runlengthEncode("aaabbc")
+
+        #expect(result != nil)
+        #expect(result!.count == 3)
+
+        #expect(result![0].0 == "a")
+        #expect(result![0].1 == 3)
+
+        #expect(result![1].0 == "b")
+        #expect(result![1].1 == 2)
+
+        #expect(result![2].0 == "c")
+        #expect(result![2].1 == 1)
+    }
+
+    @Test
+    func alternatingCharacters() {
+        let result = runlengthEncode("ababab")
+
+        #expect(result != nil)
+        #expect(result!.count == 6)
+
+        let expected: [(Character, Int)] = [
+            ("a", 1),
+            ("b", 1),
+            ("a", 1),
+            ("b", 1),
+            ("a", 1),
+            ("b", 1),
+        ]
+
+        for (actual, expected) in zip(result!, expected) {
+            #expect(actual.0 == expected.0)
+            #expect(actual.1 == expected.1)
+        }
+    }
+
+    @Test
+    func multipleCharactersWithDifferentCounts() {
+        let result = runlengthEncode("aaabbbbccccc")
+
+        #expect(result != nil)
+        #expect(result!.count == 3)
+
+        #expect(result![0].0 == "a")
+        #expect(result![0].1 == 3)
+
+        #expect(result![1].0 == "b")
+        #expect(result![1].1 == 4)
+
+        #expect(result![2].0 == "c")
+        #expect(result![2].1 == 5)
+    }
+
+    @Test
+    func unicodeCharacters() {
+        let result = runlengthEncode("ああいううう")
+
+        #expect(result != nil)
+        #expect(result!.count == 3)
+
+        #expect(result![0].0 == "あ")
+        #expect(result![0].1 == 2)
+
+        #expect(result![1].0 == "い")
+        #expect(result![1].1 == 1)
+
+        #expect(result![2].0 == "う")
+        #expect(result![2].1 == 3)
+    }
+
+    @Test
+    func emojiCharacters() {
+        let result = runlengthEncode("😀😀😁😁😁")
+
+        #expect(result != nil)
+        #expect(result!.count == 2)
+
+        #expect(result![0].0 == "😀")
+        #expect(result![0].1 == 2)
+
+        #expect(result![1].0 == "😁")
+        #expect(result![1].1 == 3)
+    }
+}
