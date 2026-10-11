@@ -21,3 +21,4 @@ let num2 = binarySearch.find(5) // Optional(2)
 
 ### Example
 - [ABC463 D - Maximize the Gap](https://atcoder.jp/contests/abc463/submissions/78713093)
+- [ABC479 C - Bento Packing](https://atcoder.jp/contests/abc479/submissions/79943598)
