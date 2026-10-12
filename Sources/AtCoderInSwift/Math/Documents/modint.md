@@ -1,26 +1,56 @@
 # ModInt
-A structure that supports calculation modulo 998244353. It supports modular arithmetic with fractions.
+A structure representing an integer modulo 998244353.
+
+### Discussion
+`ModInt` provides initializers, arithmetic and equality operators, and a string representation. Its stored `value` and modulus `mod` are not public.
+
+#### init(_:)
+Stores `x % 998244353` as the value.
+
+#### init(_:_:)
+Takes integers `a` and `b`. The implementation stores `a` multiplied by the modular inverse of `b`, computed using repeated squaring.
+
+#### inverse()
+Replaces the instance's value with its inverse modulo 998244353.
+
+#### Operators
+`+`, `-`, and `*` are defined for `ModInt` pairs and for mixed `ModInt`/`Int` operands. `/` is defined for `ModInt / ModInt`, `Int / ModInt`, and `ModInt / Int`. Compound assignment is provided for `ModInt += ModInt` and `ModInt += Int`.
+
+Equality is defined for `ModInt == ModInt`, `ModInt == Int`, and `Int == ModInt`. Comparisons with `Int` compare the stored value directly without reducing the integer modulo 998244353.
+
+```swift
+static func + (left: ModInt, right: ModInt) -> ModInt
+static func + (left: ModInt, right: Int) -> ModInt
+static func + (left: Int, right: ModInt) -> ModInt
+static func - (left: ModInt, right: ModInt) -> ModInt
+static func - (left: Int, right: ModInt) -> ModInt
+static func - (left: ModInt, right: Int) -> ModInt
+static func * (left: ModInt, right: ModInt) -> ModInt
+static func * (left: ModInt, right: Int) -> ModInt
+static func * (left: Int, right: ModInt) -> ModInt
+static func / (left: ModInt, right: ModInt) -> ModInt
+static func / (left: Int, right: ModInt) -> ModInt
+static func / (left: ModInt, right: Int) -> ModInt
+static func == (left: ModInt, right: ModInt) -> Bool
+static func == (left: ModInt, right: Int) -> Bool
+static func == (left: Int, right: ModInt) -> Bool
+static func += (left: inout ModInt, right: ModInt)
+static func += (left: inout ModInt, right: Int)
+```
+
+#### description
+Through `CustomStringConvertible`, returns the string representation of the stored `value`.
+
+### Notes
+The implementations of `ModInt / ModInt` and `ModInt / Int` do not use the inverse of the right-hand operand as conventional modular division would. Do not rely on these overloads for modular division. `Int / ModInt` and `inverse()` use the inverse of the right-hand value in the implementation.
+
 ### Usage
-Initializer are `ModInt(_:)` and `ModInt(_:_:)`.
+```swift
+let a = ModInt(4)
+let b = ModInt(1, 2)
+let sum = a + b
+
+var inverse = ModInt(2)
+inverse.inverse()
+let text = String(describing: a)
 ```
-let a = ModInt(4) // 4
-let b = ModInt(1, 2) // 499122177
-```
-`ModInt` supports the four basic arithmetic operations.
-```
-let c = ModInt(4) + ModInt(3) // 7
-let d = ModInt(1) + ModInt(998244352) // 0
-```
-`ModInt` supports calculation with `Int` values. The return type is `ModInt`.
-```
-let e = 4 + ModInt(3) // 7
-let f = ModInt(1) + 998244352 // 0
-```
-To replace a `ModInt` value with its multiplicative inverse, call `.inverse()`.
-```
-var g = ModInt(2) // 2
-g.inverse() // 499122177 
-```
-### Examples
-- [ABC471 E - Sum of Square of Sum](https://atcoder.jp/contests/abc471/submissions/78500565)
-### See Also

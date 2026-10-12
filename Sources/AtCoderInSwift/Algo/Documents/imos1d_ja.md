@@ -1,5 +1,21 @@
 # Imos1D
-1次元におけるimos法
-### Example
-- [ABC035 C - オセロ](https://atcoder.jp/contests/abc035/tasks/abc035_c)
-- [ABC408 C - Not All Covered](https://atcoder.jp/contests/abc408/submissions/79300883)
+一次元の差分配列を使って区間加算を行い、各位置の値を復元する構造体です。
+
+### Discussion
+長さ `n` のゼロ初期化された配列を作成します。`set` の区間は両端を含む `[l, r]` です。`solve()` を使用する場合は `n` を1以上にしてください。
+
+#### init(_ n: Int)
+差分配列の長さを指定します。
+
+#### set(_ l: Int, _ r: Int, _ num: Int)
+区間 `[l, r]` の各要素に `num` を加算する更新を記録します。添字は0始まりで、範囲は配列内に収めてください。
+
+#### solve() -> [Int]
+記録した更新を累積して、各位置の値を配列として返します。元の差分配列は変更しないため、複数回呼び出せます。
+
+### Usage
+```swift
+var imos = Imos1D(5)
+imos.set(1, 3, 2)
+let values = imos.solve() // [0, 2, 2, 2, 0]
+```

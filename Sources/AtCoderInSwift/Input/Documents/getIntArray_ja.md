@@ -1,17 +1,15 @@
-# getIntArray()
-数値型の配列の入力を受け取る。
+# getIntArray(gap:)
+一行の入力から整数を分割して、整数配列として取得します。
+
+```swift
+func getIntArray(gap: String = " ") -> [Int]
+```
+
 ### Discussion
-一行に並ぶ数値型の要素を配列として取得します。
-以下のような入力例を考えます。
+`gap` に指定した1文字を区切りとして入力行を分割し、各要素を `Int` に変換します。`gap` の既定値は半角スペースです。入力が整数として解釈できない場合は、強制アンラップにより実行時エラーになります。
+
+### Usage
+```swift
+let values = getIntArray() // 入力: 1 2 3 -> [1, 2, 3]
+let csvValues = getIntArray(gap: ",") // 入力: 4,5,6 -> [4, 5, 6]
 ```
-1 2 3 4 5
-11,12,13,14,15
-```
-これに対して、以下のように使用します。
-```Swift
-let a = getIntArray()
-let b = getIntArray()
-print(a) // [1, 2, 3, 4, 5]
-print(b) // [11, 12, 13, 14, 15]
-```
-### See Also

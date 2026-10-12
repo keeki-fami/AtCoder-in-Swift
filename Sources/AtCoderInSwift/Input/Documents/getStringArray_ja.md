@@ -1,14 +1,15 @@
-# getStringArray()
-文字列の配列の入力を受け取る。
+# getStringArray(gap:)
+一行の入力を分割して、文字列配列として取得します。
+
+```swift
+func getStringArray(gap: String = " ") -> [String]
+```
+
 ### Discussion
-一行に並ぶ文字列型の要素を配列として取得します。
-以下のような入力例を考えます。
+`gap` に指定した1文字を区切りとして入力行を分割します。`gap` の既定値は半角スペースです。
+
+### Usage
+```swift
+let words = getStringArray() // 入力: aaa bbb ccc -> ["aaa", "bbb", "ccc"]
+let csvWords = getStringArray(gap: ",") // 入力: aa,bb,cc -> ["aa", "bb", "cc"]
 ```
-aaa bbb ccc
-```
-これに対して、以下のように使用します。
-```Swift
-let a = getStringArray()
-print(a) // ["aaa", "bbb", "ccc"]
-```
-### See Also

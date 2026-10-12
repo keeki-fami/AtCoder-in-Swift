@@ -26,15 +26,23 @@
 |--|--|
 |[`DP2D`](./Sources/AtCoderInSwift/Algo/Documents/DP2D_ja.md)|二次元DP|
 |[`BinarySearch`](./Sources/AtCoderInSwift/Algo/Documents/BinarySearch_ja.md)|二分探索|
-|`Graph`|グラフ作成|
-|`imos1D`|一次元imos法|
-|`UnionFind`|Union-Find|
+|[`Graph`](./Sources/AtCoderInSwift/Algo/Documents/Graph_ja.md)|グラフ作成（外部からのインスタンス生成 API は未公開）|
+|[`Imos1D`](./Sources/AtCoderInSwift/Algo/Documents/imos1d_ja.md)|一次元imos法|
 |[`PrefixSum`](./Sources/AtCoderInSwift/Algo/Documents/PrefixSum_ja.md)|累積和|
+|[`runlengthEncode`](./Sources/AtCoderInSwift/Algo/Documents/runlengthEncode_ja.md)|文字列の連長圧縮|
 # Input
 各種標準入力用関数
-|`getInt`|Int型の値を取得|
-|`getString`|String型の値を取得|
-etc
+|内容|説明|
+|--|--|
+|[`getInt`](./Sources/AtCoderInSwift/Input/Documents/getInt_ja.md)|Int型の値を取得|
+|[`getString`](./Sources/AtCoderInSwift/Input/Documents/getString_ja.md)|String型の値を取得|
+|[`getIntArray`](./Sources/AtCoderInSwift/Input/Documents/getIntArray_ja.md)|一行から整数配列を取得|
+|[`getStringArray`](./Sources/AtCoderInSwift/Input/Documents/getStringArray_ja.md)|一行から文字列配列を取得|
+|[`getIntTuple2`](./Sources/AtCoderInSwift/Input/Documents/getIntTuple2_ja.md)|一行から整数2個を取得|
+|[`getIntTuple3`](./Sources/AtCoderInSwift/Input/Documents/getIntTuple3_ja.md)|一行から整数3個を取得|
+|[`getIntTuple4`](./Sources/AtCoderInSwift/Input/Documents/getIntTuple4_ja.md)|一行から整数4個を取得|
+|[`getIntTuple5`](./Sources/AtCoderInSwift/Input/Documents/getIntTuple5_ja.md)|一行から整数5個を取得|
+|[`getIntTuple6`](./Sources/AtCoderInSwift/Input/Documents/getIntTuple6_ja.md)|一行から整数6個を取得|
 # Documents
 - [ドキュメント(Math)](./Sources/AtCoderInSwift/Math/README_ja.md)
 - [ドキュメント(Algorithm)](./Sources/AtCoderInSwift/Algo/README_ja.md)
